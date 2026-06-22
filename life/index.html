@@ -72,6 +72,17 @@
         transform: rotate(1deg);
       }
 
+      .hero-photo {
+        width: 100%;
+        height: 100%;
+        max-height: 460px;
+        object-fit: cover;
+        border: 2px solid var(--life-ink);
+        border-radius: 10px;
+        box-shadow: 8px 8px 0 rgba(38, 35, 50, 0.12);
+        display: block;
+      }
+
       .media-slot {
         position: relative;
         display: grid;
@@ -120,6 +131,79 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
       }
 
+      .bili-frame {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        border: 2px solid var(--life-ink);
+        border-radius: 8px;
+        background: #000;
+        box-shadow: 6px 6px 0 rgba(46, 118, 184, 0.2);
+        overflow: hidden;
+      }
+
+      .bili-frame iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .basketball-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .photo-slot {
+        overflow: hidden;
+        border: 2px solid var(--life-ink);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 6px 6px 0 rgba(240, 184, 79, 0.34);
+        aspect-ratio: 4 / 3;
+      }
+
+      .photo-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .game-cta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 26px 28px;
+        border: 2px solid var(--life-ink);
+        border-radius: 10px;
+        background: var(--life-yellow);
+        box-shadow: 8px 8px 0 rgba(38, 35, 50, 0.16);
+        text-decoration: none;
+        color: var(--life-ink);
+        transition: transform 0.12s ease, box-shadow 0.12s ease;
+      }
+
+      .game-cta:hover,
+      .game-cta:focus-visible {
+        transform: translate(-2px, -2px);
+        box-shadow: 10px 10px 0 rgba(38, 35, 50, 0.22);
+      }
+
+      .game-cta-title {
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .game-cta-sub {
+        font-size: 14px;
+        font-weight: 700;
+        opacity: 0.78;
+      }
+
       .life-section {
         padding: 58px 0;
         border-top: 2px solid rgba(38, 35, 50, 0.14);
@@ -163,21 +247,29 @@
       }
 
       .stat {
-        padding: 14px;
+        padding: 12px 10px;
         border: 1px solid var(--line);
         border-radius: 8px;
         background: #fff;
+        text-align: center;
+        min-width: 0;
       }
 
       .stat strong {
         display: block;
-        font-size: 28px;
-        line-height: 1;
+        font-size: clamp(15px, 2.2vw, 19px);
+        line-height: 1.15;
+        font-weight: 800;
+        word-break: keep-all;
+        overflow-wrap: anywhere;
       }
 
       .stat span {
+        display: block;
+        margin-top: 4px;
         color: var(--muted);
-        font-size: 13px;
+        font-size: 12px;
+        line-height: 1.3;
       }
 
       .placeholder-note {
@@ -210,6 +302,7 @@
         <a class="brand" href="../index.html"><span class="mark">张</span><span>场外一面</span></a>
         <nav class="nav" aria-label="页面导航">
           <a href="../index.html">职业主页</a>
+          <a href="#game">游戏</a>
           <a href="#basketball">篮球</a>
           <a href="#music">音乐</a>
           <a href="#cat">猫</a>
@@ -219,27 +312,49 @@
       <section class="life-hero">
         <div>
           <span class="pixel-label">Beyond Work · 克制二次元番外篇</span>
-          <h1>项目之外，我也在球场、舞台和家里补能。</h1>
+          <h1>项目之外，我也在游戏、球场、舞台和家里补能。</h1>
           <p class="lead">
-            简历讲交付结果，这一页讲更立体的一面：我如何组织队伍、站上舞台，也如何在高强度工作之外保持热情、松弛感和观察力。
+            简历讲交付结果，这一页讲更立体的一面：我是游戏动漫爱好者，会自己动手做小游戏；也组织队伍、站上舞台，并在高强度工作之外保持热情、松弛感和观察力。
           </p>
           <div class="life-nav">
+            <a href="#game">Player Mode</a>
             <a href="#basketball">Captain Mode</a>
             <a href="#music">Stage Mode</a>
             <a href="#cat">Home Mode</a>
           </div>
         </div>
         <div class="media-board">
-          <div class="media-slot large" data-type="Hero Media">
-            <span>预留主视觉：放一张最能代表你的篮球、舞台或生活照片<br />建议路径：../assets/life/basketball/hero.jpg</span>
+          <img class="hero-photo" src="../assets/life/basketball/hero.jpg" alt="场外一面主视觉" />
+        </div>
+      </section>
+
+      <section class="life-section" id="game">
+        <div class="life-section-head">
+          <div>
+            <span class="pixel-label">01 · Game & Anime</span>
+            <h2>游戏动漫爱好者 · 自己做小游戏</h2>
+            <p class="lead">
+              我是游戏动漫爱好者，喜欢从玩家视角拆解玩法，也忍不住自己动手实现。抽空开发了一个小程序游戏，把想玩的点子做成了能跑起来的东西——欢迎来玩。
+            </p>
+          </div>
+          <div class="life-card yellow">
+            <div class="stat-row">
+              <div class="stat"><strong>Indie</strong><span>独立开发</span></div>
+              <div class="stat"><strong>Mini</strong><span>小程序游戏</span></div>
+              <div class="stat"><strong>Play</strong><span>可玩 Demo</span></div>
+            </div>
           </div>
         </div>
+        <a class="game-cta" href="https://beneshady.github.io/Project_XILI/" target="_blank" rel="noopener">
+          <span class="game-cta-title">Project XILI · 试玩</span>
+          <span class="game-cta-sub">beneshady.github.io/Project_XILI/ ↗</span>
+        </a>
       </section>
 
       <section class="life-section" id="basketball">
         <div class="life-section-head">
           <div>
-            <span class="pixel-label">01 · Basketball</span>
+            <span class="pixel-label">02 · Basketball</span>
             <h2>队长兼组织者</h2>
             <p class="lead">
               连续三年代表所在公司参加内部篮球联赛，最高名次第四名。对我来说，篮球不是简历之外的装饰，它是长期组织、临场判断和团队信任的训练场。
@@ -253,55 +368,56 @@
             </div>
           </div>
         </div>
-        <div class="grid two">
-          <div class="media-slot large" data-type="Video">
-            <span>篮球高光视频<br />../assets/life/basketball/basketball-highlight.mp4</span>
+        <div class="media-grid basketball-grid">
+          <div class="photo-slot">
+            <img src="../assets/life/basketball/篮球1.jpg" alt="篮球比赛照片 1" loading="lazy" />
           </div>
-          <div class="media-grid">
-            <div class="media-slot" data-type="Photo"><span>game-01.jpg</span></div>
-            <div class="media-slot" data-type="Photo"><span>game-02.jpg</span></div>
-            <div class="media-slot" data-type="Photo"><span>game-03.jpg</span></div>
+          <div class="photo-slot">
+            <img src="../assets/life/basketball/篮球2.jpg" alt="篮球比赛照片 2" loading="lazy" />
           </div>
         </div>
-        <p class="placeholder-note">后续替换时，把真实照片/视频放到 `../assets/life/basketball/`，再把占位框改成 img 或 video 即可。</p>
       </section>
 
       <section class="life-section" id="music">
         <div class="life-section-head">
           <div>
-            <span class="pixel-label">02 · Music</span>
+            <span class="pixel-label">03 · Music</span>
             <h2>舞台表达</h2>
             <p class="lead">
-              连续两年在公司年会上唱歌、rap。舞台经验让我更习惯把信息组织成有节奏、有感染力的表达，这一点也会回到项目汇报、方案讲解和跨团队沟通里。
+              连续两年在公司年会上唱歌、rap。这首歌我负责 Verse 的作词和表演，平时喜欢把心里的东西写成节奏，再带到台上。
             </p>
           </div>
           <div class="life-card blue">
             <div class="stat-row">
-              <div class="stat"><strong>2</strong><span>连续年会演出</span></div>
-              <div class="stat"><strong>Rap</strong><span>节奏表达</span></div>
+              <div class="stat"><strong>Verse</strong><span>作词</span></div>
+              <div class="stat"><strong>Rap</strong><span>表演</span></div>
               <div class="stat"><strong>Live</strong><span>现场呈现</span></div>
             </div>
           </div>
         </div>
-        <div class="grid two">
-          <div class="media-slot large" data-type="Video">
-            <span>年会唱歌 / rap 视频<br />../assets/life/music/annual-party-rap.mp4</span>
-          </div>
-          <div class="media-grid">
-            <div class="media-slot" data-type="Photo"><span>stage-01.jpg</span></div>
-            <div class="media-slot" data-type="Photo"><span>stage-02.jpg</span></div>
-            <div class="life-card blue">
-              <h3>表达不是表演欲</h3>
-              <p class="muted">它更像一种把复杂内容讲清楚、讲得有人愿意听的能力。</p>
-            </div>
-          </div>
+        <div class="bili-frame">
+          <iframe
+            src="https://player.bilibili.com/player.html?bvid=BV1sB4y1w7dh&page=1&high_quality=1&danmaku=0&autoplay=0"
+            scrolling="no"
+            border="0"
+            frameborder="no"
+            framespacing="0"
+            allowfullscreen="true"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            referrerpolicy="no-referrer"
+            title="《Riding Through this Wave》：再来亿遍">
+          </iframe>
+          <p class="placeholder-note">
+            《Riding Through this Wave》：再来亿遍 ·
+            <a href="https://www.bilibili.com/video/BV1sB4y1w7dh/" target="_blank" rel="noopener">在 B 站打开</a>
+          </p>
         </div>
       </section>
 
       <section class="life-section" id="cat">
         <div class="life-section-head">
           <div>
-            <span class="pixel-label">03 · Cat</span>
+            <span class="pixel-label">04 · Cat</span>
             <h2>家里的猫</h2>
             <p class="lead">
               工作之外，我喜欢记录家里猫的日常。它算是生活里的稳定器，也提醒我在高强度项目节奏里保留一点松弛感和观察力。
@@ -324,7 +440,7 @@
       </section>
 
       <footer class="footer">
-        场外一面 · 这页用于补充人格和表达力，不替代职业主页。媒体素材统一放在 ../assets/life/ 下。
+        张逸凡 · 场外一面
       </footer>
     </main>
   </body>
