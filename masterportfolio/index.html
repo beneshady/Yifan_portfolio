@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>张逸凡 · masterPortfolio 风格</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <style>
+      body {
+        background: #fbfaf6;
+      }
+
+      .mp-hero {
+        min-height: 620px;
+      }
+
+      .hero-visual {
+        display: grid;
+        gap: 16px;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 16px;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 18px;
+        padding: 20px;
+      }
+
+      .timeline-item strong {
+        color: var(--green);
+      }
+
+      .skill-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .skill {
+        padding: 16px;
+        text-align: center;
+        font-weight: 720;
+      }
+
+      .project-card h3 {
+        margin: 16px 0 8px;
+        font-size: 22px;
+      }
+
+      .award-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .life-preview {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(260px, 0.28fr);
+        gap: 24px;
+        align-items: center;
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .life-preview h2 {
+        margin-bottom: 12px;
+      }
+
+      .life-chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      @media (max-width: 820px) {
+        .timeline-item {
+          grid-template-columns: 1fr;
+        }
+
+        .skill-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .life-preview {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html"><span class="mark">张</span><span>masterPortfolio Preview</span></a>
+        <nav class="nav" aria-label="页面导航">
+          <a href="../index.html">总览</a>
+          <a href="../astro/index.html">Astro</a>
+          <a href="../gitprofile/index.html">GitProfile</a>
+          <a href="./life/index.html">场外一面</a>
+        </nav>
+      </header>
+
+      <section class="hero mp-hero">
+        <div>
+          <div class="eyebrow">Hello, I am Yifan Zhang</div>
+          <h1>研发体系里的产品交付者</h1>
+          <p class="lead">
+            8 年软件研发、云服务运维与产品交付经验，近年聚焦流程管理中台、AI 应用落地、需求治理和跨部门项目推进。
+          </p>
+          <div class="actions">
+            <a class="button" href="#projects">看项目案例</a>
+            <a class="button secondary" href="#experience">看经历</a>
+            <a class="button secondary" href="./life/index.html">场外一面</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="case-thumb card" src="../assets/ai-ops.svg" alt="AI 工单分析平台示意图" />
+          <div class="grid three">
+            <div class="metric card card-body"><strong>8+</strong><span>研发与交付经验</span></div>
+            <div class="metric card card-body"><strong>70+</strong><span>人工变更自动化</span></div>
+            <div class="metric card card-body"><strong>30+</strong><span>边缘站点运维</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2>能力栈</h2>
+        <p class="section-intro">masterPortfolio 风格适合把技能显式铺开，但这里将“技术栈”服务于产品交付叙事。</p>
+        <div class="skill-list">
+          <div class="skill card">需求分析</div>
+          <div class="skill card">版本交付</div>
+          <div class="skill card">AI 应用</div>
+          <div class="skill card">数据分析</div>
+          <div class="skill card">BPMN / Figma</div>
+          <div class="skill card">Python / Java</div>
+          <div class="skill card">RAG / Agent</div>
+          <div class="skill card">跨团队协同</div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <h2>经历</h2>
+        <div class="timeline">
+          <article class="timeline-item card">
+            <strong>2023.11 至今</strong>
+            <div>
+              <h3>质量与流程 IT · 版本需求分析师 / 项目经理 / 运营经理</h3>
+              <p class="muted">管理 20+ 开发人力需求管道，负责流程管理中台版本交付；孵化流程智能问答助手与 AI 工单分析平台。</p>
+            </div>
+          </article>
+          <article class="timeline-item card">
+            <strong>2018.03 - 2023.10</strong>
+            <div>
+              <h3>华为云 · 软件工程师 / 运维工程师</h3>
+              <p class="muted">负责分布式云服务运维体系、自动化交付专项、IDaaS 统一身份认证和工业云解决方案交付。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>项目案例</h2>
+        <div class="grid three">
+          <article class="project-card card">
+            <img class="case-thumb" src="../assets/case-flow.svg" alt="流程管理 SaaS 中台示意图" />
+            <div class="card-body">
+              <h3>流程管理 SaaS 中台</h3>
+              <p class="muted">用需求治理和版本机制支撑多业务域流程落地，保持 30+ 版本稳定交付。</p>
+            </div>
+          </article>
+          <article class="project-card card">
+            <img class="case-thumb" src="../assets/ai-ops.svg" alt="AI 工单分析平台示意图" />
+            <div class="card-body">
+              <h3>AI 工单分析平台</h3>
+              <p class="muted">将运营分析效率从 1 天提升至 10 分钟，让用户反馈进入产品迭代闭环。</p>
+            </div>
+          </article>
+          <article class="project-card card">
+            <img class="case-thumb" src="../assets/cloud-delivery.svg" alt="分布式云自动化交付示意图" />
+            <div class="card-body">
+              <h3>自动化交付专项</h3>
+              <p class="muted">协调 5 个服务域，把 70+ 人工变更编排为自动化流程，支撑边缘站点稳定运行。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>荣誉与可信度</h2>
+        <div class="award-strip">
+          <span class="tag">流程 IT 卓越共创个人奖</span>
+          <span class="tag">IT 平台服务部部长奖</span>
+          <span class="tag">Cloud BU 总裁嘉奖令</span>
+          <span class="tag">华为公司明日之星</span>
+          <span class="tag">UC Irvine Dean's Honor List</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="life-preview">
+          <div>
+            <div class="eyebrow">Beyond Work</div>
+            <h2>场外一面</h2>
+            <p class="muted">
+              简历讲交付结果，这一页补充更立体的个人侧面：篮球队长与组织者、年会唱歌和 rap、以及家里的猫。
+            </p>
+            <div class="life-chip-row">
+              <span class="tag">篮球队长</span>
+              <span class="tag">舞台表达</span>
+              <span class="tag">家里的猫</span>
+            </div>
+          </div>
+          <a class="button" href="./life/index.html">进入兴趣页</a>
+        </div>
+      </section>
+
+      <footer class="footer">masterPortfolio 风格 · 信息最全，但用于简历链接时需要保持克制，避免显得过于花哨。</footer>
+    </main>
+  </body>
+</html>

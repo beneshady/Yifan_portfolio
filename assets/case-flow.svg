@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="脱敏流程管理中台示意图">
+  <rect width="760" height="420" fill="#f8faf7"/>
+  <rect x="54" y="54" width="652" height="312" rx="16" fill="#ffffff" stroke="#dfe4ea"/>
+  <g fill="#1c1f24" font-family="Arial, Microsoft YaHei, sans-serif">
+    <text x="82" y="96" font-size="26" font-weight="700">流程管理 SaaS 中台</text>
+    <text x="82" y="128" font-size="16" fill="#68707d">需求管道 · 版本交付 · 多业务域协同</text>
+  </g>
+  <g stroke="#277a5c" stroke-width="3" fill="none">
+    <path d="M120 216h128"/>
+    <path d="M320 216h128"/>
+    <path d="M520 216h96"/>
+  </g>
+  <g fill="#ffffff" stroke="#dfe4ea">
+    <rect x="86" y="176" width="120" height="80" rx="10"/>
+    <rect x="248" y="176" width="120" height="80" rx="10"/>
+    <rect x="410" y="176" width="120" height="80" rx="10"/>
+    <rect x="572" y="176" width="104" height="80" rx="10"/>
+  </g>
+  <g fill="#1c1f24" font-family="Arial, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+    <text x="146" y="212">收集</text>
+    <text x="146" y="235" fill="#68707d" font-size="13" font-weight="400">业务诉求</text>
+    <text x="308" y="212">评审</text>
+    <text x="308" y="235" fill="#68707d" font-size="13" font-weight="400">优先级</text>
+    <text x="470" y="212">交付</text>
+    <text x="470" y="235" fill="#68707d" font-size="13" font-weight="400">版本计划</text>
+    <text x="624" y="212">复盘</text>
+    <text x="624" y="235" fill="#68707d" font-size="13" font-weight="400">数据改进</text>
+  </g>
+  <g fill="#277a5c" font-family="Arial, Microsoft YaHei, sans-serif" font-weight="700">
+    <text x="96" y="318" font-size="34">30+</text>
+    <text x="222" y="318" font-size="34">20+</text>
+    <text x="348" y="318" font-size="34">0</text>
+  </g>
+  <g fill="#68707d" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14">
+    <text x="96" y="342">版本上线</text>
+    <text x="222" y="342">开发人力</text>
+    <text x="348" y="342">重大事故</text>
+  </g>
+</svg>

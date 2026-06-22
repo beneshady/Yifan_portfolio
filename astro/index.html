@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>张逸凡 · Astro 风格案例笔记</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <style>
+      body {
+        background: #fcfcf9;
+      }
+
+      .astro-wrap {
+        width: min(940px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .astro-hero {
+        padding: 76px 0 42px;
+      }
+
+      .astro-hero h1 {
+        max-width: 840px;
+        margin: 12px 0 18px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(44px, 8vw, 86px);
+        line-height: 0.94;
+        letter-spacing: 0;
+      }
+
+      .astro-note {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 28px;
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .astro-note time {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .astro-note h2 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+
+      .astro-note p {
+        margin: 0 0 14px;
+        color: #48515d;
+      }
+
+      .aside-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      @media (max-width: 720px) {
+        .astro-note {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .aside-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="astro-wrap">
+      <header class="topbar">
+        <a class="brand" href="../index.html"><span class="mark">张</span><span>Case Notes</span></a>
+        <nav class="nav" aria-label="页面导航">
+          <a href="../index.html">总览</a>
+          <a href="../gitprofile/index.html">GitProfile</a>
+          <a href="../masterportfolio/index.html">masterPortfolio</a>
+        </nav>
+      </header>
+
+      <section class="astro-hero">
+        <div class="eyebrow">R&D Product Manager</div>
+        <h1>把复杂研发体系里的需求，变成稳定上线的产品结果。</h1>
+        <p class="lead">
+          我关注企业中台、流程管理、AI 应用落地与跨团队交付。这里不展示公司内网截图，而是用脱敏案例复盘说明我的判断方式、推进方法和可迁移能力。
+        </p>
+      </section>
+
+      <figure class="card" style="margin:0 0 34px;">
+        <img class="case-thumb" src="../assets/case-flow.svg" alt="流程管理 SaaS 中台脱敏示意图" />
+      </figure>
+
+      <section class="section" id="metrics">
+        <div class="grid three">
+          <div class="metric card card-body"><strong>30+</strong><span>版本按时按质上线</span></div>
+          <div class="metric card card-body"><strong>20+</strong><span>开发人力需求管道管理</span></div>
+          <div class="metric card card-body"><strong>3000+</strong><span>AI 问答助手日均问答量</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="notes">
+        <h2>脱敏项目复盘</h2>
+        <article class="astro-note">
+          <time>Case 01</time>
+          <div>
+            <h2>大型企业流程管理 SaaS 中台的需求治理</h2>
+            <p>面向采购、制造、CRM 等多业务域，建立从需求收集、评审、优先级排定到版本验收的闭环机制。</p>
+            <div class="tag-row"><span class="tag">需求管道</span><span class="tag">版本交付</span><span class="tag">流程中台</span></div>
+          </div>
+        </article>
+        <article class="astro-note">
+          <time>Case 02</time>
+          <div>
+            <h2>流程智能问答助手从 0 到 1</h2>
+            <p>从用户查流程、找制度、问操作的高频场景切入，设计 AI 问答路径和反馈闭环，上线后日均问答 3000+。</p>
+            <div class="tag-row"><span class="tag">AI 产品</span><span class="tag">RAG 思路</span><span class="tag">用户体验</span></div>
+          </div>
+        </article>
+        <article class="astro-note">
+          <time>Case 03</time>
+          <div>
+            <h2>AI 工单分析平台：从运营成本到产品输入</h2>
+            <p>将多模块工单分析从人工周转变为可日常运行的分析机制，把问题归因、用户反馈和版本优化连接起来。</p>
+            <div class="tag-row"><span class="tag">数据分析</span><span class="tag">效率提升</span><span class="tag">产品改进</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>我能带来的价值</h2>
+        <div class="aside-grid">
+          <div class="card card-body">
+            <h3>懂研发边界</h3>
+            <p class="muted">有软件工程、云服务运维与自动化交付经验，能把需求拆到研发可评估、可排期、可验收。</p>
+          </div>
+          <div class="card card-body">
+            <h3>懂业务落地</h3>
+            <p class="muted">长期在复杂组织里协调业务、产品、研发与运营，习惯用数据和版本结果验证方案。</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">Astro 风格 · 推荐用于简历链接：克制、可信、适合脱敏案例文章。</footer>
+    </main>
+  </body>
+</html>

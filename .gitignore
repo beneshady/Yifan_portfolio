@@ -1,0 +1,55 @@
+# 依赖（Node，预防性）
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+.npm/
+.pnpm-store/
+
+# 环境变量 / 密钥（server.mjs 已读取 process.env.PORT，未来可能用 .env）
+.env
+.env.*
+!.env.example
+
+# 构建产物 / 缓存（预防性，astro/ 目录名让 .astro/ 缓存值得列出）
+dist/
+build/
+out/
+.cache/
+.astro/
+.next/
+.nuxt/
+.output/
+.turbo/
+.parcel-cache/
+coverage/
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 操作系统文件（Windows + macOS 跨平台）
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+.fleet/
+.vs/
+.history/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project

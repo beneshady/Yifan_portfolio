@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="分布式云自动化交付示意图">
+  <rect width="760" height="420" fill="#f9f8fb"/>
+  <rect x="48" y="48" width="664" height="324" rx="16" fill="#ffffff" stroke="#dfe4ea"/>
+  <g font-family="Arial, Microsoft YaHei, sans-serif">
+    <text x="80" y="96" fill="#1c1f24" font-size="26" font-weight="700">分布式云自动化交付</text>
+    <text x="80" y="128" fill="#68707d" font-size="16">跨服务域协同 · 变更编排 · 稳定运行</text>
+  </g>
+  <g stroke="#6b5ea8" stroke-width="2" fill="none" opacity="0.75">
+    <path d="M380 214 L188 172"/>
+    <path d="M380 214 L248 282"/>
+    <path d="M380 214 L520 158"/>
+    <path d="M380 214 L590 282"/>
+    <path d="M380 214 L380 320"/>
+  </g>
+  <circle cx="380" cy="214" r="58" fill="#6b5ea8"/>
+  <g fill="#ffffff" font-family="Arial, Microsoft YaHei, sans-serif" text-anchor="middle">
+    <text x="380" y="208" font-size="18" font-weight="700">自动化</text>
+    <text x="380" y="234" font-size="14">任务令</text>
+  </g>
+  <g fill="#ffffff" stroke="#dfe4ea">
+    <circle cx="188" cy="172" r="36"/>
+    <circle cx="248" cy="282" r="36"/>
+    <circle cx="520" cy="158" r="36"/>
+    <circle cx="590" cy="282" r="36"/>
+    <circle cx="380" cy="320" r="36"/>
+  </g>
+  <g fill="#1c1f24" font-family="Arial, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+    <text x="188" y="177">服务域 A</text>
+    <text x="248" y="287">服务域 B</text>
+    <text x="520" y="163">服务域 C</text>
+    <text x="590" y="287">服务域 D</text>
+    <text x="380" y="325">服务域 E</text>
+  </g>
+  <g font-family="Arial, Microsoft YaHei, sans-serif">
+    <text x="86" y="344" fill="#6b5ea8" font-size="34" font-weight="700">70+</text>
+    <text x="170" y="344" fill="#68707d" font-size="15">人工变更自动编排</text>
+    <text x="390" y="344" fill="#6b5ea8" font-size="34" font-weight="700">30+</text>
+    <text x="480" y="344" fill="#68707d" font-size="15">边缘站点稳定运行</text>
+  </g>
+</svg>

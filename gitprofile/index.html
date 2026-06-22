@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>张逸凡 · GitProfile 风格</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <style>
+      body {
+        background: #f6f7f4;
+      }
+
+      .profile-layout {
+        display: grid;
+        grid-template-columns: 310px 1fr;
+        gap: 22px;
+        padding: 34px 0 58px;
+      }
+
+      .profile-card {
+        position: sticky;
+        top: 18px;
+        align-self: start;
+        padding: 24px;
+      }
+
+      .avatar {
+        display: grid;
+        width: 92px;
+        height: 92px;
+        place-items: center;
+        border-radius: 50%;
+        background: #1c1f24;
+        color: #fff;
+        font-size: 34px;
+        font-weight: 800;
+        margin-bottom: 18px;
+      }
+
+      .profile-card h1 {
+        margin: 0;
+        font-size: 30px;
+      }
+
+      .profile-card p {
+        color: var(--muted);
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--green);
+        font-weight: 720;
+        font-size: 14px;
+      }
+
+      .status::before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--green);
+      }
+
+      .repo-card {
+        padding: 22px;
+      }
+
+      .repo-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .repo-card h2 {
+        margin: 0 0 8px;
+        font-size: 23px;
+      }
+
+      .repo-visual {
+        width: 100%;
+        display: block;
+        margin: 16px 0;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .repo-card p {
+        color: var(--muted);
+      }
+
+      .lang {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: #46505c;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .lang::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--teal);
+      }
+
+      .contrib {
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        gap: 5px;
+      }
+
+      .cell {
+        height: 16px;
+        border-radius: 3px;
+        background: #dfe8dc;
+      }
+
+      .cell.mid {
+        background: #8dc2a9;
+      }
+
+      .cell.high {
+        background: #277a5c;
+      }
+
+      @media (max-width: 880px) {
+        .profile-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-card {
+          position: static;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html"><span class="mark">张</span><span>GitProfile Preview</span></a>
+        <nav class="nav" aria-label="页面导航">
+          <a href="../index.html">总览</a>
+          <a href="../astro/index.html">Astro</a>
+          <a href="../masterportfolio/index.html">masterPortfolio</a>
+        </nav>
+      </header>
+
+      <div class="profile-layout">
+        <aside class="profile-card card">
+          <div class="avatar">YZ</div>
+          <h1>张逸凡</h1>
+          <p>研发型产品经理 / 需求分析负责人。把企业中台需求、AI 应用和跨团队交付串成可上线的产品结果。</p>
+          <div class="status">Open to R&D Product Roles</div>
+          <div class="section" style="padding:24px 0 0;border-top:0;">
+            <div class="tag-row">
+              <span class="tag">Product</span>
+              <span class="tag">AI</span>
+              <span class="tag">Python</span>
+              <span class="tag">Java</span>
+              <span class="tag">BPMN</span>
+              <span class="tag">Dify</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="grid">
+          <article class="repo-card card">
+            <div class="repo-head">
+              <div>
+                <h2>enterprise-process-platform</h2>
+                <p>脱敏案例：大型企业流程管理 SaaS 中台，覆盖流程设计、审批、执行与数据迁移等场景。</p>
+              </div>
+              <span class="lang">Product System</span>
+            </div>
+            <img class="repo-visual" src="../assets/case-flow.svg" alt="流程管理 SaaS 中台脱敏示意图" />
+            <div class="tag-row"><span class="tag">30+ releases</span><span class="tag">20+ devs</span><span class="tag">0 major incidents</span></div>
+          </article>
+
+          <article class="repo-card card">
+            <div class="repo-head">
+              <div>
+                <h2>ai-process-assistant</h2>
+                <p>脱敏案例：流程智能问答助手，从用户查询路径、知识组织到反馈闭环设计，推动 AI 首次落地流程管理场景。</p>
+              </div>
+              <span class="lang">AI Product</span>
+            </div>
+            <img class="repo-visual" src="../assets/ai-ops.svg" alt="AI 工单与问答分析脱敏示意图" />
+            <div class="tag-row"><span class="tag">3000+ daily Q&A</span><span class="tag">RAG mindset</span><span class="tag">0 to 1</span></div>
+          </article>
+
+          <article class="repo-card card">
+            <div class="repo-head">
+              <div>
+                <h2>ai-ticket-insights</h2>
+                <p>脱敏案例：用 AI 工单分析提炼用户痛点和问题归因，将运营分析从 1 天压缩至 10 分钟。</p>
+              </div>
+              <span class="lang">Internal Tool</span>
+            </div>
+            <div class="tag-row"><span class="tag">1 day to 10 min</span><span class="tag">feedback loop</span><span class="tag">data driven</span></div>
+          </article>
+
+          <article class="repo-card card">
+            <h2>Contribution Rhythm</h2>
+            <p>用 GitProfile 的“贡献图”表达持续交付节奏，而不是公开内部代码。</p>
+            <div class="contrib" aria-label="交付节奏示意图">
+              <span class="cell"></span><span class="cell mid"></span><span class="cell high"></span><span class="cell mid"></span><span class="cell"></span><span class="cell mid"></span>
+              <span class="cell high"></span><span class="cell high"></span><span class="cell mid"></span><span class="cell"></span><span class="cell mid"></span><span class="cell high"></span>
+              <span class="cell"></span><span class="cell mid"></span><span class="cell high"></span><span class="cell mid"></span><span class="cell"></span><span class="cell high"></span>
+            </div>
+          </article>
+        </section>
+      </div>
+
+      <footer class="footer">GitProfile 风格 · 更像工程项目索引，适合强调技术可信度。</footer>
+    </main>
+  </body>
+</html>
