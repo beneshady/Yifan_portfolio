@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>张逸凡 · 研发型产品经理</title>
+    <title data-text="home.pageTitle">张逸凡 · 研发型产品经理</title>
     <link rel="stylesheet" href="./shared.css" />
+    <script src="./content.js" defer></script>
     <style>
       body {
         background: #fbfaf6;
@@ -98,130 +99,130 @@
   <body>
     <main class="page-shell">
       <header class="topbar">
-        <a class="brand" href="./index.html"><span class="mark">张</span><span>张逸凡 · 个人主页</span></a>
+        <a class="brand" href="./index.html"><span class="mark" data-text="shared.brand.mark">张</span><span data-text="shared.brand.home">张逸凡 · 个人主页</span></a>
         <nav class="nav" aria-label="页面导航">
-          <a href="#projects">项目案例</a>
-          <a href="#experience">经历</a>
-          <a href="#skills">能力栈</a>
-          <a href="./life/index.html">场外一面</a>
+          <a href="#projects" data-text="home.nav.projects">项目案例</a>
+          <a href="#experience" data-text="home.nav.experience">经历</a>
+          <a href="#skills" data-text="home.nav.skills">能力栈</a>
+          <a href="./life/index.html" data-text="home.nav.life">场外一面</a>
         </nav>
       </header>
 
       <section class="hero mp-hero">
         <div>
-          <div class="eyebrow">Hello, I am Yifan Zhang</div>
-          <h1>研发体系里的产品交付者</h1>
-          <p class="lead">
+          <div class="eyebrow" data-text="home.hero.eyebrow">Hello, I am Yifan Zhang</div>
+          <h1 data-text="home.hero.h1">研发体系里的产品交付者</h1>
+          <p class="lead" data-text="home.hero.lead">
             8 年软件研发、云服务运维与产品交付经验，近年聚焦流程管理中台、AI 应用落地、需求治理和跨部门项目推进。
           </p>
           <div class="actions">
-            <a class="button" href="#projects">看项目案例</a>
-            <a class="button secondary" href="#experience">看经历</a>
-            <a class="button secondary" href="./life/index.html">场外一面</a>
+            <a class="button" href="#projects" data-text="home.hero.ctaPrimary">看项目案例</a>
+            <a class="button secondary" href="#experience" data-text="home.hero.ctaExperience">看经历</a>
+            <a class="button secondary" href="./life/index.html" data-text="home.hero.ctaLife">场外一面</a>
           </div>
         </div>
         <div class="hero-visual">
-          <img class="case-thumb card" src="./assets/ai-ops.svg" alt="AI 工单分析平台示意图" />
+          <img class="case-thumb card" src="./assets/ai-ops.svg" data-attr="alt:home.hero.imgAlt" alt="AI 工单分析平台示意图" />
           <div class="grid three">
-            <div class="metric card card-body"><strong>8+</strong><span>研发与交付经验</span></div>
-            <div class="metric card card-body"><strong>70+</strong><span>人工变更自动化</span></div>
-            <div class="metric card card-body"><strong>30+</strong><span>边缘站点运维</span></div>
+            <div class="metric card card-body"><strong data-text="home.metrics.0.value">8+</strong><span data-text="home.metrics.0.label">研发与交付经验</span></div>
+            <div class="metric card card-body"><strong data-text="home.metrics.1.value">70+</strong><span data-text="home.metrics.1.label">人工变更自动化</span></div>
+            <div class="metric card card-body"><strong data-text="home.metrics.2.value">30+</strong><span data-text="home.metrics.2.label">边缘站点运维</span></div>
           </div>
         </div>
       </section>
 
       <section class="section" id="skills">
-        <h2>能力栈</h2>
-        <p class="section-intro">masterPortfolio 风格适合把技能显式铺开，但这里将“技术栈”服务于产品交付叙事。</p>
+        <h2 data-text="home.skillsH2">能力栈</h2>
+        <p class="section-intro" data-text="home.skillsIntro">masterPortfolio 风格适合把技能显式铺开，但这里将"技术栈"服务于产品交付叙事。</p>
         <div class="skill-list">
-          <div class="skill card">需求分析</div>
-          <div class="skill card">版本交付</div>
-          <div class="skill card">AI 应用</div>
-          <div class="skill card">数据分析</div>
-          <div class="skill card">BPMN / Figma</div>
-          <div class="skill card">Python / Java</div>
-          <div class="skill card">RAG / Agent</div>
-          <div class="skill card">跨团队协同</div>
+          <div class="skill card" data-text="home.skills.0">需求分析</div>
+          <div class="skill card" data-text="home.skills.1">版本交付</div>
+          <div class="skill card" data-text="home.skills.2">AI 应用</div>
+          <div class="skill card" data-text="home.skills.3">数据分析</div>
+          <div class="skill card" data-text="home.skills.4">BPMN / Figma</div>
+          <div class="skill card" data-text="home.skills.5">Python / Java</div>
+          <div class="skill card" data-text="home.skills.6">RAG / Agent</div>
+          <div class="skill card" data-text="home.skills.7">跨团队协同</div>
         </div>
       </section>
 
       <section class="section" id="experience">
-        <h2>经历</h2>
+        <h2 data-text="home.experienceH2">经历</h2>
         <div class="timeline">
           <article class="timeline-item card">
-            <strong>2023 至今</strong>
+            <strong data-text="home.timeline.0.range">2023 至今</strong>
             <div>
-              <h3>流程 IT / 研发效能部门 · 版本需求分析师 / 项目经理 / 运营经理</h3>
-              <p class="muted">管理 20+ 开发人力需求管道，负责流程管理中台版本交付；孵化流程智能问答助手与 AI 工单分析平台。</p>
+              <h3 data-text="home.timeline.0.title">流程 IT / 研发效能部门 · 版本需求分析师 / 项目经理 / 运营经理</h3>
+              <p class="muted" data-text="home.timeline.0.desc">管理 20+ 开发人力需求管道，负责流程管理中台版本交付；孵化流程智能问答助手与 AI 工单分析平台。</p>
             </div>
           </article>
           <article class="timeline-item card">
-            <strong>2018 - 2023</strong>
+            <strong data-text="home.timeline.1.range">2018 - 2023</strong>
             <div>
-              <h3>某头部云厂商 · 软件工程师 / 运维工程师</h3>
-              <p class="muted">负责分布式云服务运维体系、自动化交付专项、统一身份认证与企业云解决方案交付。</p>
+              <h3 data-text="home.timeline.1.title">某头部云厂商 · 软件工程师 / 运维工程师</h3>
+              <p class="muted" data-text="home.timeline.1.desc">负责分布式云服务运维体系、自动化交付专项、统一身份认证与企业云解决方案交付。</p>
             </div>
           </article>
         </div>
       </section>
 
       <section class="section" id="projects">
-        <h2>项目案例</h2>
+        <h2 data-text="home.projectsH2">项目案例</h2>
         <div class="grid three">
           <article class="project-card card">
-            <img class="case-thumb" src="./assets/case-flow.svg" alt="流程管理 SaaS 中台示意图" />
+            <img class="case-thumb" src="./assets/case-flow.svg" data-attr="alt:home.projects.0.imgAlt" alt="流程管理 SaaS 中台示意图" />
             <div class="card-body">
-              <h3>流程管理 SaaS 中台</h3>
-              <p class="muted">用需求治理和版本机制支撑多业务域流程落地，保持 30+ 版本稳定交付。</p>
+              <h3 data-text="home.projects.0.title">流程管理 SaaS 中台</h3>
+              <p class="muted" data-text="home.projects.0.desc">用需求治理和版本机制支撑多业务域流程落地，保持 30+ 版本稳定交付。</p>
             </div>
           </article>
           <article class="project-card card">
-            <img class="case-thumb" src="./assets/ai-ops.svg" alt="AI 工单分析平台示意图" />
+            <img class="case-thumb" src="./assets/ai-ops.svg" data-attr="alt:home.projects.1.imgAlt" alt="AI 工单分析平台示意图" />
             <div class="card-body">
-              <h3>AI 工单分析平台</h3>
-              <p class="muted">将运营分析效率从 1 天提升至 10 分钟，让用户反馈进入产品迭代闭环。</p>
+              <h3 data-text="home.projects.1.title">AI 工单分析平台</h3>
+              <p class="muted" data-text="home.projects.1.desc">将运营分析效率从 1 天提升至 10 分钟，让用户反馈进入产品迭代闭环。</p>
             </div>
           </article>
           <article class="project-card card">
-            <img class="case-thumb" src="./assets/cloud-delivery.svg" alt="分布式云自动化交付示意图" />
+            <img class="case-thumb" src="./assets/cloud-delivery.svg" data-attr="alt:home.projects.2.imgAlt" alt="分布式云自动化交付示意图" />
             <div class="card-body">
-              <h3>自动化交付专项</h3>
-              <p class="muted">协调 5 个服务域，把 70+ 人工变更编排为自动化流程，支撑边缘站点稳定运行。</p>
+              <h3 data-text="home.projects.2.title">自动化交付专项</h3>
+              <p class="muted" data-text="home.projects.2.desc">协调 5 个服务域，把 70+ 人工变更编排为自动化流程，支撑边缘站点稳定运行。</p>
             </div>
           </article>
         </div>
       </section>
 
       <section class="section">
-        <h2>荣誉与可信度</h2>
+        <h2 data-text="home.awardsH2">荣誉与可信度</h2>
         <div class="award-strip">
-          <span class="tag">部门级卓越个人奖</span>
-          <span class="tag">部门负责人奖</span>
-          <span class="tag">事业群总裁嘉奖</span>
-          <span class="tag">公司级明日之星</span>
-          <span class="tag">UC Irvine Dean's Honor List</span>
+          <span class="tag" data-text="home.awards.0">部门级卓越个人奖</span>
+          <span class="tag" data-text="home.awards.1">部门负责人奖</span>
+          <span class="tag" data-text="home.awards.2">事业群总裁嘉奖</span>
+          <span class="tag" data-text="home.awards.3">公司级明日之星</span>
+          <span class="tag" data-text="home.awards.4">UC Irvine Dean's Honor List</span>
         </div>
       </section>
 
       <section class="section">
         <div class="life-preview">
           <div>
-            <div class="eyebrow">Beyond Work</div>
-            <h2>场外一面</h2>
-            <p class="muted">
+            <div class="eyebrow" data-text="home.lifePreview.eyebrow">Beyond Work</div>
+            <h2 data-text="home.lifePreview.h2">场外一面</h2>
+            <p class="muted" data-text="home.lifePreview.lead">
               简历讲交付结果，这一页补充更立体的个人侧面：篮球队长与组织者、年会唱歌和 rap、以及家里的猫。
             </p>
             <div class="life-chip-row">
-              <span class="tag">篮球队长</span>
-              <span class="tag">舞台表达</span>
-              <span class="tag">家里的猫</span>
+              <span class="tag" data-text="home.lifePreview.chips.0">篮球队长</span>
+              <span class="tag" data-text="home.lifePreview.chips.1">舞台表达</span>
+              <span class="tag" data-text="home.lifePreview.chips.2">家里的猫</span>
             </div>
           </div>
-          <a class="button" href="./life/index.html">进入兴趣页</a>
+          <a class="button" href="./life/index.html" data-text="home.lifePreview.cta">进入兴趣页</a>
         </div>
       </section>
 
-      <footer class="footer">张逸凡 · 研发型产品经理 · 脱敏案例复盘</footer>
+      <footer class="footer" data-text="home.footer">张逸凡 · 研发型产品经理 · 脱敏案例复盘</footer>
     </main>
   </body>
 </html>
