@@ -1,21 +1,22 @@
-# Life Page Media
+# Homepage Media
 
-Put future public media for the `masterportfolio/life/` page here.
+The root homepage automatically uses media from this directory.
 
-Recommended names:
+## Existing basketball photos
 
 - `basketball/hero.jpg`
-- `basketball/game-01.jpg`
-- `basketball/game-02.jpg`
-- `basketball/game-03.jpg`
-- `basketball/basketball-highlight.mp4`
-- `music/stage-01.jpg`
-- `music/stage-02.jpg`
-- `music/annual-party-rap.mp4`
+- `basketball/篮球1.jpg`
+- `basketball/篮球2.jpg`
+
+## Add cat photos later
+
+Create `cat/` and use these names:
+
 - `cat/cat-hero.jpg`
 - `cat/cat-01.jpg`
 - `cat/cat-02.jpg`
 - `cat/cat-03.jpg`
-- `cat/cat-04.jpg`
 
-Use short English filenames with hyphens. Prefer `.jpg`, `.webp`, and `.mp4`.
+Missing cat files stay as intentional placeholders. As soon as a matching file is added, the homepage displays it automatically.
+
+Prefer landscape `.jpg` or `.webp` images. Keep each image below 2 MB when possible.

@@ -3,226 +3,178 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-text="home.pageTitle">张逸凡 · 研发型产品经理</title>
-    <link rel="stylesheet" href="./shared.css" />
+    <meta name="description" content="张逸凡的场外主页：篮球队长、音乐与 Rap、独立游戏，以及家里的猫。" data-attr="content:site.meta.description" />
+    <meta name="theme-color" content="#07080d" />
+    <title data-text="site.meta.title">张逸凡 · 场外主页</title>
+    <link rel="stylesheet" href="./cyber.css" />
     <script src="./content.js" defer></script>
-    <style>
-      body {
-        background: #fbfaf6;
-      }
-
-      .mp-hero {
-        min-height: 620px;
-      }
-
-      .hero-visual {
-        display: grid;
-        gap: 16px;
-      }
-
-      .timeline {
-        display: grid;
-        gap: 16px;
-      }
-
-      .timeline-item {
-        display: grid;
-        grid-template-columns: 140px 1fr;
-        gap: 18px;
-        padding: 20px;
-      }
-
-      .timeline-item strong {
-        color: var(--green);
-      }
-
-      .skill-list {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .skill {
-        padding: 16px;
-        text-align: center;
-        font-weight: 720;
-      }
-
-      .project-card h3 {
-        margin: 16px 0 8px;
-        font-size: 22px;
-      }
-
-      .award-strip {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .life-preview {
-        display: grid;
-        grid-template-columns: minmax(0, 0.72fr) minmax(260px, 0.28fr);
-        gap: 24px;
-        align-items: center;
-        padding: 26px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: #fff;
-        box-shadow: var(--shadow);
-      }
-
-      .life-preview h2 {
-        margin-bottom: 12px;
-      }
-
-      .life-chip-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      @media (max-width: 820px) {
-        .timeline-item {
-          grid-template-columns: 1fr;
-        }
-
-        .skill-list {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .life-preview {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <script src="./site.js" defer></script>
   </head>
-  <body>
-    <main class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="./index.html"><span class="mark" data-text="shared.brand.mark">张</span><span data-text="shared.brand.home">张逸凡 · 个人主页</span></a>
-        <nav class="nav" aria-label="页面导航">
-          <a href="#projects" data-text="home.nav.projects">项目案例</a>
-          <a href="#experience" data-text="home.nav.experience">经历</a>
-          <a href="#skills" data-text="home.nav.skills">能力栈</a>
-          <a href="./life/index.html" data-text="home.nav.life">场外一面</a>
+  <body id="top">
+    <a class="skip-link" href="#main" data-text="site.a11y.skip">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="返回首页顶部">
+          <span class="brand-mark" data-text="site.brand.mark">张</span>
+          <span class="brand-copy">
+            <span data-text="site.brand.name">张逸凡 / YIFAN</span>
+            <small data-text="site.brand.status">OFF WORK · ON LIFE</small>
+          </span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开页面导航">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="兴趣导航">
+          <a href="#basketball" data-text="site.nav.basketball">01 篮球</a>
+          <a href="#music" data-text="site.nav.music">02 音乐</a>
+          <a href="#game" data-text="site.nav.game">03 游戏</a>
+          <a href="#cat" data-text="site.nav.cat">04 猫</a>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <section class="hero mp-hero">
-        <div>
-          <div class="eyebrow" data-text="home.hero.eyebrow">Hello, I am Yifan Zhang</div>
-          <h1 data-text="home.hero.h1">研发体系里的产品交付者</h1>
-          <p class="lead" data-text="home.hero.lead">
-            8 年软件研发、云服务运维与产品交付经验，近年聚焦流程管理中台、AI 应用落地、需求治理和跨部门项目推进。
-          </p>
-          <div class="actions">
-            <a class="button" href="#projects" data-text="home.hero.ctaPrimary">看项目案例</a>
-            <a class="button secondary" href="#experience" data-text="home.hero.ctaExperience">看经历</a>
-            <a class="button secondary" href="./life/index.html" data-text="home.hero.ctaLife">场外一面</a>
-          </div>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img src="./assets/life/basketball/hero.jpg" alt="" data-attr="src:site.hero.imageSrc" />
         </div>
-        <div class="hero-visual">
-          <img class="case-thumb card" src="./assets/ai-ops.svg" data-attr="alt:home.hero.imgAlt" alt="AI 工单分析平台示意图" />
-          <div class="grid three">
-            <div class="metric card card-body"><strong data-text="home.metrics.0.value">8+</strong><span data-text="home.metrics.0.label">研发与交付经验</span></div>
-            <div class="metric card card-body"><strong data-text="home.metrics.1.value">70+</strong><span data-text="home.metrics.1.label">人工变更自动化</span></div>
-            <div class="metric card card-body"><strong data-text="home.metrics.2.value">30+</strong><span data-text="home.metrics.2.label">边缘站点运维</span></div>
-          </div>
+        <div class="hero-inner">
+          <span class="signal" data-text="site.hero.signal">B-SIDE SIGNAL ONLINE</span>
+          <h1 id="hero-title">
+            <span class="hero-solid" data-text="site.hero.titleSolid">张逸凡，</span>
+            <span class="hero-outline" data-text="site.hero.titleOutline">场外见。</span>
+          </h1>
+          <p class="hero-lead" data-text="site.hero.lead">简历已经讲完我如何工作。这里留给球场、舞台、游戏和家里的猫，也留给那个更鲜活、更松弛的我。</p>
+          <ul class="mode-list" aria-label="个人身份标签">
+            <li data-text="site.hero.modes.0">CAPTAIN / 队长</li>
+            <li data-text="site.hero.modes.1">RAPPER / 表达者</li>
+            <li data-text="site.hero.modes.2">PLAYER / 玩家</li>
+            <li data-text="site.hero.modes.3">CAT STAFF / 铲屎官</li>
+          </ul>
         </div>
+        <span class="scroll-cue" aria-hidden="true">SCROLL TO EXPLORE</span>
       </section>
 
-      <section class="section" id="skills">
-        <h2 data-text="home.skillsH2">能力栈</h2>
-        <p class="section-intro" data-text="home.skillsIntro">masterPortfolio 风格适合把技能显式铺开，但这里将"技术栈"服务于产品交付叙事。</p>
-        <div class="skill-list">
-          <div class="skill card" data-text="home.skills.0">需求分析</div>
-          <div class="skill card" data-text="home.skills.1">版本交付</div>
-          <div class="skill card" data-text="home.skills.2">AI 应用</div>
-          <div class="skill card" data-text="home.skills.3">数据分析</div>
-          <div class="skill card" data-text="home.skills.4">BPMN / Figma</div>
-          <div class="skill card" data-text="home.skills.5">Python / Java</div>
-          <div class="skill card" data-text="home.skills.6">RAG / Agent</div>
-          <div class="skill card" data-text="home.skills.7">跨团队协同</div>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>TEAM FIRST</span><span>KEEP PLAYING</span><span>MAKE SOME NOISE</span><span>STAY CURIOUS</span><span>HOME WITH CAT</span>
         </div>
-      </section>
+      </div>
 
-      <section class="section" id="experience">
-        <h2 data-text="home.experienceH2">经历</h2>
-        <div class="timeline">
-          <article class="timeline-item card">
-            <strong data-text="home.timeline.0.range">2023 至今</strong>
-            <div>
-              <h3 data-text="home.timeline.0.title">流程 IT / 研发效能部门 · 版本需求分析师 / 项目经理 / 运营经理</h3>
-              <p class="muted" data-text="home.timeline.0.desc">管理 20+ 开发人力需求管道，负责流程管理中台版本交付；孵化流程智能问答助手与 AI 工单分析平台。</p>
-            </div>
-          </article>
-          <article class="timeline-item card">
-            <strong data-text="home.timeline.1.range">2018 - 2023</strong>
-            <div>
-              <h3 data-text="home.timeline.1.title">某头部云厂商 · 软件工程师 / 运维工程师</h3>
-              <p class="muted" data-text="home.timeline.1.desc">负责分布式云服务运维体系、自动化交付专项、统一身份认证与企业云解决方案交付。</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <h2 data-text="home.projectsH2">项目案例</h2>
-        <div class="grid three">
-          <article class="project-card card">
-            <img class="case-thumb" src="./assets/case-flow.svg" data-attr="alt:home.projects.0.imgAlt" alt="流程管理 SaaS 中台示意图" />
-            <div class="card-body">
-              <h3 data-text="home.projects.0.title">流程管理 SaaS 中台</h3>
-              <p class="muted" data-text="home.projects.0.desc">用需求治理和版本机制支撑多业务域流程落地，保持 30+ 版本稳定交付。</p>
-            </div>
-          </article>
-          <article class="project-card card">
-            <img class="case-thumb" src="./assets/ai-ops.svg" data-attr="alt:home.projects.1.imgAlt" alt="AI 工单分析平台示意图" />
-            <div class="card-body">
-              <h3 data-text="home.projects.1.title">AI 工单分析平台</h3>
-              <p class="muted" data-text="home.projects.1.desc">将运营分析效率从 1 天提升至 10 分钟，让用户反馈进入产品迭代闭环。</p>
-            </div>
-          </article>
-          <article class="project-card card">
-            <img class="case-thumb" src="./assets/cloud-delivery.svg" data-attr="alt:home.projects.2.imgAlt" alt="分布式云自动化交付示意图" />
-            <div class="card-body">
-              <h3 data-text="home.projects.2.title">自动化交付专项</h3>
-              <p class="muted" data-text="home.projects.2.desc">协调 5 个服务域，把 70+ 人工变更编排为自动化流程，支撑边缘站点稳定运行。</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 data-text="home.awardsH2">荣誉与可信度</h2>
-        <div class="award-strip">
-          <span class="tag" data-text="home.awards.0">部门级卓越个人奖</span>
-          <span class="tag" data-text="home.awards.1">部门负责人奖</span>
-          <span class="tag" data-text="home.awards.2">事业群总裁嘉奖</span>
-          <span class="tag" data-text="home.awards.3">公司级明日之星</span>
-          <span class="tag" data-text="home.awards.4">UC Irvine Dean's Honor List</span>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="life-preview">
+      <section class="manifesto" aria-labelledby="manifesto-title">
+        <div class="content-shell manifesto-grid" data-reveal>
+          <div class="manifesto-number" aria-hidden="true">B</div>
           <div>
-            <div class="eyebrow" data-text="home.lifePreview.eyebrow">Beyond Work</div>
-            <h2 data-text="home.lifePreview.h2">场外一面</h2>
-            <p class="muted" data-text="home.lifePreview.lead">
-              简历讲交付结果，这一页补充更立体的个人侧面：篮球队长与组织者、年会唱歌和 rap、以及家里的猫。
-            </p>
-            <div class="life-chip-row">
-              <span class="tag" data-text="home.lifePreview.chips.0">篮球队长</span>
-              <span class="tag" data-text="home.lifePreview.chips.1">舞台表达</span>
-              <span class="tag" data-text="home.lifePreview.chips.2">家里的猫</span>
-            </div>
+            <p class="section-kicker" data-text="site.manifesto.kicker">Beyond the resume</p>
+            <h2 id="manifesto-title" data-text="site.manifesto.title">工作之外，我喜欢把人聚起来，把想法做出来，也把日子过得有声有色。</h2>
+            <p data-text="site.manifesto.copy">篮球让我理解团队和临场判断，音乐让我练习真诚表达，游戏让我保持好奇，猫则负责提醒我慢下来。它们不是简历的注脚，而是我看待生活的方式。</p>
           </div>
-          <a class="button" href="./life/index.html" data-text="home.lifePreview.cta">进入兴趣页</a>
         </div>
       </section>
 
-      <footer class="footer" data-text="home.footer">张逸凡 · 研发型产品经理 · 脱敏案例复盘</footer>
+      <section class="hobby-section basketball" id="basketball" aria-labelledby="basketball-title">
+        <div class="content-shell">
+          <div class="section-head" data-reveal>
+            <div>
+              <p class="section-kicker" data-text="site.basketball.kicker">01 / Basketball</p>
+              <h2 class="section-title" id="basketball-title" data-text="site.basketball.title">先把人聚到一起，再把球打好。</h2>
+              <p class="section-copy" data-text="site.basketball.copy">连续三年代表华为云参加公司一层篮球比赛，最高名次第四名。作为队长兼组织者，我负责的不只是场上的一回合，也包括把一群人真正组织成一支队伍。</p>
+            </div>
+            <div class="stat-board" aria-label="篮球经历数据">
+              <div class="stat"><strong data-text="site.basketball.stats.0.value">3 YEARS</strong><span data-text="site.basketball.stats.0.label">连续代表团队参赛</span></div>
+              <div class="stat"><strong data-text="site.basketball.stats.1.value">TOP 4</strong><span data-text="site.basketball.stats.1.label">公司一层比赛最高名次</span></div>
+              <div class="stat"><strong data-text="site.basketball.stats.2.value">CAPTAIN</strong><span data-text="site.basketball.stats.2.label">队长兼组织者</span></div>
+            </div>
+          </div>
+          <div class="photo-grid" data-reveal>
+            <figure class="photo-panel">
+              <span class="media-code">COURT_CAM // 01</span>
+              <img src="./assets/life/basketball/篮球1.jpg" alt="张逸凡参加篮球比赛的现场照片" data-attr="src:site.basketball.media.0.src;alt:site.basketball.media.0.alt" loading="lazy" />
+              <figcaption class="photo-caption"><span data-text="site.basketball.media.0.caption">比赛日 / 和队友并肩上场</span><span>TEAM MODE</span></figcaption>
+            </figure>
+            <figure class="photo-panel secondary">
+              <span class="media-code">COURT_CAM // 02</span>
+              <img src="./assets/life/basketball/篮球2.jpg" alt="篮球队比赛后的合影" data-attr="src:site.basketball.media.1.src;alt:site.basketball.media.1.alt" loading="lazy" />
+              <figcaption class="photo-caption"><span data-text="site.basketball.media.1.caption">终场之后 / 排名之外还有彼此</span><span>STAY TOGETHER</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="hobby-section music" id="music" aria-labelledby="music-title">
+        <div class="content-shell music-layout">
+          <div data-reveal>
+            <p class="section-kicker" data-text="site.music.kicker">02 / Music & Rap</p>
+            <h2 class="section-title" id="music-title" data-text="site.music.title">把心里的话，写进节拍里。</h2>
+            <p class="section-copy" data-text="site.music.copy">连续两年在华为云年会上唱歌、Rap。这首歌里，我负责 Verse 的作词和演唱。舞台对我来说不是表演勇气，而是把真实感受交给更多人。</p>
+            <div class="music-stats" aria-label="音乐经历标签">
+              <span data-text="site.music.tags.0">2× ANNUAL PARTY</span><span data-text="site.music.tags.1">LYRICS</span><span data-text="site.music.tags.2">RAP / LIVE</span>
+            </div>
+          </div>
+          <div class="video-shell" data-reveal>
+            <div class="video-frame">
+              <iframe src="https://player.bilibili.com/player.html?bvid=BV1sB4y1w7dh&page=1&high_quality=1&danmaku=0&autoplay=0" title="《Riding Through this Wave》：再来亿遍" data-attr="src:site.music.video.src;title:site.music.video.title" scrolling="no" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="no-referrer"></iframe>
+            </div>
+            <div class="video-meta">
+              <span data-text="site.music.video.caption">《Riding Through this Wave》/ 再来亿遍</span>
+              <a href="https://www.bilibili.com/video/BV1sB4y1w7dh/" data-attr="href:site.music.video.link" target="_blank" rel="noopener" data-text="site.music.video.cta">在 B 站打开 ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hobby-section game" id="game" aria-labelledby="game-title">
+        <div class="content-shell game-layout">
+          <div data-reveal>
+            <p class="section-kicker" data-text="site.game.kicker">03 / Game & ACG</p>
+            <h2 class="section-title" id="game-title" data-text="site.game.title">喜欢玩，也忍不住自己做。</h2>
+            <p class="section-copy" data-text="site.game.copy">我喜欢游戏和 ACG 文化，也习惯从玩家视角拆解体验。后来干脆把一个点子做成了能运行、能试玩的小项目 Project XILI，让兴趣从喜欢走到了创造。</p>
+          </div>
+          <a class="game-ticket" href="https://beneshady.github.io/Project_XILI/" data-attr="href:site.game.link" target="_blank" rel="noopener" data-reveal>
+            <span class="game-ticket-label"><span>PLAYABLE FILE</span><span>NO. 03</span></span>
+            <span><strong data-text="site.game.ticket.title">PROJECT XILI</strong><span class="game-ticket-copy" data-text="site.game.ticket.copy">一个由兴趣驱动、自己动手完成的小游戏。</span></span>
+            <span class="game-ticket-cta"><span data-text="site.game.ticket.cta">ENTER GAME</span><span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="hobby-section cat" id="cat" aria-labelledby="cat-title">
+        <div class="content-shell">
+          <div class="cat-head" data-reveal>
+            <div>
+              <p class="section-kicker" data-text="site.cat.kicker">04 / Home Operator</p>
+              <h2 class="section-title" id="cat-title" data-text="site.cat.title">最后，向真正的负责人汇报。</h2>
+              <p class="section-copy" data-text="site.cat.copy">家里的猫是日常节奏的最高负责人。它不关心项目排期，只负责让我准时回家、认真观察生活，并在忙碌之后恢复一点柔软。</p>
+            </div>
+            <div class="cat-role" data-text="site.cat.role">ROLE: HOME QA LEAD / MOOD MANAGER / PRIORITY: P0</div>
+          </div>
+          <div class="cat-grid" data-reveal>
+            <figure class="cat-slot" data-media-src="./assets/life/cat/cat-hero.jpg" data-media-alt="家里的猫的主照片" data-attr="data-media-src:site.cat.media.0.src;data-media-alt:site.cat.media.0.alt">
+              <figcaption class="cat-placeholder"><span data-text="site.cat.media.0.placeholder">等待 cat-hero.jpg 接入</span></figcaption>
+            </figure>
+            <figure class="cat-slot" data-media-src="./assets/life/cat/cat-01.jpg" data-media-alt="家里的猫的日常照片一" data-attr="data-media-src:site.cat.media.1.src;data-media-alt:site.cat.media.1.alt">
+              <figcaption class="cat-placeholder"><span data-text="site.cat.media.1.placeholder">cat-01.jpg</span></figcaption>
+            </figure>
+            <figure class="cat-slot" data-media-src="./assets/life/cat/cat-02.jpg" data-media-alt="家里的猫的日常照片二" data-attr="data-media-src:site.cat.media.2.src;data-media-alt:site.cat.media.2.alt">
+              <figcaption class="cat-placeholder"><span data-text="site.cat.media.2.placeholder">cat-02.jpg</span></figcaption>
+            </figure>
+            <figure class="cat-slot" data-media-src="./assets/life/cat/cat-03.jpg" data-media-alt="家里的猫的日常照片三" data-attr="data-media-src:site.cat.media.3.src;data-media-alt:site.cat.media.3.alt">
+              <figcaption class="cat-placeholder"><span data-text="site.cat.media.3.placeholder">cat-03.jpg</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="content-shell footer-inner">
+        <div>
+          <div class="footer-name" data-text="site.footer.name">张逸凡 / YIFAN ZHANG</div>
+          <div><span data-current-year></span> · <span data-text="site.footer.tagline">OFF WORK · ON LIFE</span></div>
+        </div>
+        <a class="back-top" href="#top" data-text="site.footer.backTop">BACK TO TOP ↑</a>
+      </div>
+    </footer>
   </body>
 </html>
